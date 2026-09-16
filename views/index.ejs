@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 40px 20px;
+            background: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #262624;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 560px;
+            background: #ffffff;
+            border: 1px solid #e5e3df;
+            border-radius: 8px;
+            padding: 32px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 24px;
+        }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #6b6a68;
+            margin: 28px 0 12px;
+        }
+
+        .section-label:first-of-type {
+            margin-top: 0;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: #6b6a68;
+            margin-bottom: 4px;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px 10px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #262624;
+            background: #fafaf9;
+            border: 1px solid #d9d7d3;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #262624;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 8px;
+            padding: 11px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            color: #ffffff;
+            background: #262624;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #40403d;
+        }
+
+        @media (max-width: 480px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/registration" method="POST">
+        <h1>REGISTRATION</h1>
+
+        <p class="section-label">Personal Information</p>
+
+        <div class="row">
+            <div class="field">
+                <label for="idn">ID Number</label>
+                <input type="number" id="idn" name="idn" placeholder="Enter ID Number" required>
+            </div>
+
+            <div class="field">
+                <label for="fn">Firstname</label>
+                <input type="text" id="fn" name="fn" placeholder="Enter Firstname" required>
+            </div>
+
+            <div class="field">
+                <label for="mi">Middle Initial</label>
+                <input type="text" id="mi" name="mi" placeholder="Enter Middle Initial" required>
+            </div>
+
+            <div class="field">
+                <label for="sn">Surname</label>
+                <input type="text" id="sn" name="sn" placeholder="Enter Surname" required>
+            </div>
+
+            <div class="field">
+                <label for="gd">Gender</label>
+                <input type="text" id="gd" name="gd" placeholder="Enter Gender" required>
+            </div>
+
+            <div class="field">
+                <label for="dob">Date of Birth</label>
+                <input type="text" id="dob" name="dob" placeholder="Enter Date of Birth" required>
+            </div>
+        </div>
+
+        <p class="section-label">Contact Information</p>
+
+        <div class="row">
+            <div class="field">
+                <label for="pn">Phone Number</label>
+                <input type="number" id="pn" name="pn" placeholder="Enter Phone Number" required>
+            </div>
+
+            <div class="field">
+                <label for="em">Email</label>
+                <input type="text" id="em" name="em" placeholder="Enter Email" required>
+            </div>
+
+            <div class="field">
+                <label for="add">Address</label>
+                <input type="text" id="add" name="add" placeholder="Enter Address" required>
+            </div>
+
+            <div class="field">
+                <label for="ct">Citizenship</label>
+                <input type="text" id="ct" name="ct" placeholder="Enter Citizenship" required>
+            </div>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
